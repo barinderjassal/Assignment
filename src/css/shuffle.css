@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+.header {
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-color-box {
+  padding: 20px;
+  float: left;
+  width: 100%;
+}
+
+.grid-items-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-items-list > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  padding: 20px;
+  font-size: 100px;
+  color: #edd8d5;
+  border: 1px solid darkgray;
+}
+
+.btn-container {
+  display: block;
+  height: 200px;
+  float: left;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.btn {
+  background-color: lightblue;
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px lightskyblue;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.author-name {
+  padding: 20px;
+  margin: 10px auto;
+  font-size: 15px;
+  color: grey;
+  font-style: italic;
+  clear: both;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .grid-color-box {
+    width: 70%;
+  }
+  .btn-container {
+    width: 30%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+  .btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .grid-color-box {
+    width: 100%;
+    position: absolute;
+    top: 130px;
+  }
+
+  .grid-items-list {
+    grid-template-columns: auto;
+    grid-gap: 10px;
+  }
+
+  .grid-items-list > li {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    font-size: 15px;
+  }
+
+  .list-item-number {
+    width: 95%;
+    display: inline;
+    background: lightgrey;
+    height: inherit;
+    text-align: center;
+    padding-top: 20px;
+    color: #000;
+  }
+
+  .colored-bar {
+    width: 5%;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    height: inherit;
+    background-color: inherit;
+  }
+
+  .btn-container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100px;
+    cursor: pointer;
+  }
+
+  .author-name {
+    position: relative;
+    top: 550px;
+  }
+}
