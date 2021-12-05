@@ -1,3 +1,10 @@
+<!-- 
+  Copyright (c) 2021 by Barinderjit Singh
+  
+  Maersk Assignment
+  Problem Description: An Attched PDF in the repo
+  -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +12,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/shuffle.css" />
-    <script src="./js/shuffle.js"></script>
     <title>Shuffle and Sort</title>
   </head>
   <body>
@@ -13,60 +19,24 @@
       <h3>Shuffle and Sort</h3>
     </div>
     <div class="grid-color-box">
-      <ul class="grid-items-list">
+      <ul class="grid-items-list" id="grid-list">
         <!-- 
-          These list elements could be repeated using JavaScript or Map function in React
+          list elements will be created and repeated using JavaScript function on onload of DOM
          -->
-        <li style="background-color: #000000">
-          <div class="colored-bar"></div>
-          <span class="list-item-number">1</span>
-        </li>
-        <li style="background-color: #333333">
-          <div class="colored-bar"></div>
-          <span class="list-item-number">2</span>
-        </li>
-        <li style="background-color: #ffffff">
-          <div class="colored-bar"></div>
-          <span class="list-item-number">3</span>
-        </li>
-        <li style="background-color: #efefef">
-          <div class="colored-bar"></div>
-          <span class="list-item-number">4</span>
-        </li>
-        <li style="background-color: #72c3dc">
-          <div class="colored-bar"></div>
-          <span class="list-item-number">5</span>
-        </li>
-        <li style="background-color: #2b8ead">
-          <div class="colored-bar"></div>
-          <span class="list-item-number">6</span>
-        </li>
-        <li style="background-color: #6f98a8">
-          <div class="colored-bar"></div>
-          <span class="list-item-number">7</span>
-        </li>
-        <li style="background-color: #bfbfbf">
-          <div class="colored-bar"></div>
-          <span class="list-item-number">8</span>
-        </li>
-        <li style="background-color: #2f454e">
-          <div class="colored-bar"></div>
-          <span class="list-item-number">9</span>
-        </li>
       </ul>
     </div>
     <div class="btn-container">
       <div>
-        <button class="btn" type="button" onclick="shuffleNumbersHandler()">
-          Shuffle
-        </button>
+        <button class="btn" type="button" id="shuffle-btn">Shuffle</button>
       </div>
       <div>
-        <button class="btn" type="button" onclick="sortNumbersHandler()">
-          Sort
-        </button>
+        <button class="btn" type="button" id="sort-btn">Sort</button>
       </div>
     </div>
     <p class="author-name">Shuffle and Sort by Barinderjit Singh</p>
+
+    <script type="module" async src="./js/constants.js"></script>
+    <script type="module" async src="./js/util.js"></script>
+    <script type="module" defer src="./js/main.js"></script>
   </body>
 </html>
